@@ -24,9 +24,34 @@ my_works_btn.addEventListener("click", () => {
   right_btn_container.style.opacity = "0";
   right_btn_container.style.transition = "opacity 0.7s linear";
   setTimeout(() => {
-    console.log("clicked");
     my_works_container.style.visibility = "visible";
     my_works_container.style.opacity = "1";
     my_works_container.style.transition = "opacity 3s";
   }, 700);
 });
+
+// Middle Line
+const middle_line = document.getElementById("middle-line");
+let n = null;
+
+const show_shadow = () => {
+  // n = Math.floor(Math.random() * 3) + 1; // random numer between 1 and 3
+
+  // while (n != 0) {
+  //   console.log(n);
+  //   middle_line.classList.toggle("line-shadow");
+  //   // setTimeout(() => {
+  //   //   middle_line.classList.toggle("line-shadow");
+  //   // }, 1000);
+
+  //   n = n - 1;
+  // }
+
+  n = Math.floor(Math.random() * 20) + 1; // random numer between 1 and 10
+  if (n >= 15) {
+    middle_line.classList.toggle("line-shadow");
+    //middle_line.classList.toggle("line-shadow");
+  }
+};
+
+setInterval(show_shadow, 100);

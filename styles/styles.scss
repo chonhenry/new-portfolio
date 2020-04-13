@@ -28,6 +28,10 @@ a {
     height: 75vh;
     background-color: $secondary;
   }
+
+  .line-shadow {
+    box-shadow: 0px 0px 20px 3px $secondary;
+  }
 }
 
 footer {
@@ -45,6 +49,14 @@ footer {
     a {
       margin: 0 10px;
       color: $secondary;
+
+      i {
+        transition: all 0.2s;
+
+        &:hover {
+          transform: translateY(-5px);
+        }
+      }
     }
   }
 }
