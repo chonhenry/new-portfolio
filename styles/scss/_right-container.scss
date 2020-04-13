@@ -48,20 +48,35 @@
         margin-bottom: 15px;
         display: flex;
         width: 100%;
+        opacity: 0.4;
+        transition: all 0.5s;
+
+        &:hover {
+          width: 120%;
+          opacity: 1;
+        }
 
         a {
           width: 50%;
 
           img {
             width: 100%;
-            border-radius: 2px;
+            border-radius: 3px;
+            // opacity: 0.4;
+            // transition: all 0.5s;
+
+            // &:hover {
+            //   width: 180%;
+            //   opacity: 1;
+            // }
           }
         }
 
         .work-description {
           // background-color: green;
+          position: relative;
           width: 50%;
-          padding: 15px;
+          padding: 10px 15px;
 
           .divider-line {
             height: 1px;
@@ -69,6 +84,22 @@
             background-color: $secondary;
             margin: 10px 0;
           }
+
+          .view-code {
+            position: absolute;
+            bottom: 15px;
+          }
+
+          // .languages-description {
+          //   display: flex;
+          //   flex-direction: column;
+          //   position: relative;
+
+          //   a {
+          //     position: absolute;
+          //     bottom: 0;
+          //   }
+          // }
         }
       }
     }
