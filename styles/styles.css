@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+.btn {
+  border: solid 1px #14ffec;
+  padding: 10px 20px;
+  font-size: 20px;
+  width: 130px;
+  height: 45px;
+  text-align: center;
+  border-radius: 4px;
+  color: #14ffec;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: #0a192f;
+  background-color: #14ffec;
+}
+
+#left-container {
+  width: 40vw;
+  height: 75vh;
+  color: #14ffec;
+  position: relative;
+}
+
+#left-container #left-btn-container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#left-container #left-btn-container #left-btn:hover {
+  cursor: pointer;
+}
+
+#left-container #about-me-container {
+  visibility: hidden;
+  opacity: 0;
+  padding: 0 10%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #ccd6f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#left-container #about-me-container #name {
+  color: #14ffec;
+  font-size: 70px;
+}
+
+.btn {
+  border: solid 1px #14ffec;
+  padding: 10px 20px;
+  font-size: 20px;
+  width: 130px;
+  height: 45px;
+  text-align: center;
+  border-radius: 4px;
+  color: #14ffec;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: #0a192f;
+  background-color: #14ffec;
+}
+
+#right-container {
+  width: 40vw;
+  height: 90vh;
+  color: #14ffec;
+  position: relative;
+}
+
+#right-container #right-btn-container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#right-container #right-btn-container #left-btn:hover {
+  cursor: pointer;
+}
+
+#right-container #my-works-container {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #ccd6f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: scroll;
+}
+
+#right-container #my-works-container::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+#right-container #my-works-container #work-collections {
+  width: 100%;
+  height: 90%;
+}
+
+#right-container #my-works-container #work-collections .work-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px;
+  display: flex;
+  width: 100%;
+}
+
+#right-container #my-works-container #work-collections .work-item a {
+  width: 50%;
+}
+
+#right-container #my-works-container #work-collections .work-item a img {
+  width: 100%;
+  border-radius: 2px;
+}
+
+#right-container #my-works-container #work-collections .work-item .work-description {
+  width: 50%;
+  padding: 15px;
+}
+
+#right-container #my-works-container #work-collections .work-item .work-description .divider-line {
+  height: 1px;
+  width: 100%;
+  background-color: #14ffec;
+  margin: 10px 0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Share Tech Mono", monospace;
+}
+
+a {
+  text-decoration: none;
+}
+
+#container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #0a192f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#container #middle-line {
+  width: 2px;
+  height: 75vh;
+  background-color: #14ffec;
+}
+
+footer {
+  position: absolute;
+  color: #14ffec;
+  bottom: 35px;
+  width: 100%;
+}
+
+footer #footer {
+  width: 30%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer #footer a {
+  margin: 0 10px;
+  color: #14ffec;
+}
+/*# sourceMappingURL=styles.css.map */

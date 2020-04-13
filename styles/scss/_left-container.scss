@@ -1,0 +1,42 @@
+@import "./button";
+
+#left-container {
+  // border: $secondary 1px solid; // will remove
+  width: 40vw;
+  height: 75vh;
+  color: $secondary;
+  position: relative;
+
+  #left-btn-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // visibility: hidden;
+
+    #left-btn:hover {
+      cursor: pointer;
+    }
+  }
+
+  #about-me-container {
+    visibility: hidden;
+    opacity: 0;
+    padding: 0 10%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: $grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    #name {
+      color: $secondary;
+      font-size: 70px;
+    }
+  }
+}

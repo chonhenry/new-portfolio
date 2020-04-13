@@ -1,0 +1,17 @@
+.btn {
+  border: solid 1px $secondary;
+  padding: 10px 20px;
+  font-size: 20px;
+  width: 130px;
+  height: 45px; //45
+  text-align: center;
+  border-radius: 4px;
+  color: $secondary;
+  transition: all 0.7s;
+  cursor: pointer;
+
+  &:hover {
+    color: $main;
+    background-color: $secondary;
+  }
+}
