@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
 .btn {
-  border: solid 1px #14ffec;
   padding: 10px 20px;
   font-size: 20px;
   width: 130px;
@@ -37,6 +36,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-animation: page-load 3s;
+          animation: page-load 3s;
 }
 
 #left-container #left-btn-container #left-btn:hover {
@@ -70,8 +71,11 @@
   font-size: 70px;
 }
 
-.btn {
+#left-container #about-me-container #resume {
   border: solid 1px #14ffec;
+}
+
+.btn {
   padding: 10px 20px;
   font-size: 20px;
   width: 130px;
@@ -94,6 +98,8 @@
   height: 90vh;
   color: #14ffec;
   position: relative;
+  -webkit-animation: page-load 3s;
+          animation: page-load 3s;
 }
 
 #right-container #right-btn-container {
@@ -221,6 +227,8 @@ a {
   width: 2px;
   height: 75vh;
   background-color: #14ffec;
+  -webkit-animation: page-load 3s;
+          animation: page-load 3s;
 }
 
 #container .line-shadow {
@@ -254,10 +262,57 @@ footer #footer a {
 footer #footer a i {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  -webkit-animation: page-load 3s;
+          animation: page-load 3s;
 }
 
 footer #footer a i:hover {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
+}
+
+footer #footer .tooltip {
+  margin: 0 8px;
+  position: relative;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  cursor: pointer;
+  -webkit-animation: page-load 3s;
+          animation: page-load 3s;
+}
+
+footer #footer .tooltip .tooltiptext {
+  font-size: 16px;
+  width: 150px;
+  position: absolute;
+  margin-left: 10px;
+  visibility: hidden;
+}
+
+footer #footer .tooltip:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+footer #footer .tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+@-webkit-keyframes page-load {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes page-load {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

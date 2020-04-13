@@ -35,23 +35,25 @@ const middle_line = document.getElementById("middle-line");
 let n = null;
 
 const show_shadow = () => {
-  // n = Math.floor(Math.random() * 3) + 1; // random numer between 1 and 3
-
-  // while (n != 0) {
-  //   console.log(n);
-  //   middle_line.classList.toggle("line-shadow");
-  //   // setTimeout(() => {
-  //   //   middle_line.classList.toggle("line-shadow");
-  //   // }, 1000);
-
-  //   n = n - 1;
-  // }
-
-  n = Math.floor(Math.random() * 20) + 1; // random numer between 1 and 10
-  if (n >= 15) {
+  n = Math.floor(Math.random() * 20) + 1; // random numer between 1 and 20
+  if (n >= 16) {
     middle_line.classList.toggle("line-shadow");
-    //middle_line.classList.toggle("line-shadow");
   }
 };
 
 setInterval(show_shadow, 100);
+
+// Copy to Clipboard
+const email_btn = document.getElementById("email_btn");
+const copyText = document.getElementById("copy_text");
+let selection = window.getSelection();
+let range = document.createRange();
+
+email_btn.addEventListener("click", () => {
+  window.navigator.clipboard.writeText("chonhenry@outlook.com");
+  copyText.innerText = "Email has been copied";
+});
+
+email_btn.addEventListener("mouseover", () => {
+  copyText.innerText = "Copy My Email to Clipboard";
+});

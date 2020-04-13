@@ -27,6 +27,7 @@ a {
     width: 2px;
     height: 75vh;
     background-color: $secondary;
+    animation: page-load 3s;
   }
 
   .line-shadow {
@@ -52,11 +53,44 @@ footer {
 
       i {
         transition: all 0.2s;
+        animation: page-load 3s;
 
         &:hover {
           transform: translateY(-5px);
         }
       }
     }
+
+    .tooltip {
+      margin: 0 8px;
+      position: relative;
+      transition: all 0.2s;
+      cursor: pointer;
+      animation: page-load 3s;
+
+      .tooltiptext {
+        font-size: 16px;
+        width: 150px;
+        position: absolute;
+        margin-left: 10px;
+        visibility: hidden;
+      }
+
+      &:hover {
+        transform: translateY(-5px);
+        .tooltiptext {
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
+
+@keyframes page-load {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
   }
 }
