@@ -16,6 +16,7 @@ a {
 }
 
 #container {
+  position: relative;
   width: 100vw;
   height: 100vh;
   background-color: $main;
@@ -27,7 +28,7 @@ a {
     width: 2px;
     height: 75vh;
     background-color: $secondary;
-    animation: page-load 3s;
+    animation: page-load 5s;
   }
 
   .line-shadow {
@@ -53,7 +54,7 @@ footer {
 
       i {
         transition: all 0.2s;
-        animation: page-load 3s;
+        animation: page-load 5s;
 
         &:hover {
           transform: translateY(-5px);
@@ -66,7 +67,7 @@ footer {
       position: relative;
       transition: all 0.2s;
       cursor: pointer;
-      animation: page-load 3s;
+      animation: page-load 5s;
 
       .tooltiptext {
         font-size: 16px;
@@ -94,3 +95,28 @@ footer {
     opacity: 100%;
   }
 }
+
+@media screen and (max-width: 770px) {
+  #container {
+    padding: 0;
+    margin: 0;
+    // background-color: blue;
+    flex-direction: column;
+
+    #middle-line {
+      width: 85vw;
+      height: 2px;
+      background-color: $secondary;
+      animation: page-load 5s;
+      position: absolute;
+      top: 320px;
+    }
+  }
+}
+
+//Phone - less than 500px(max-width: 500px)
+// @media (max-width: 500px) {
+//   #container {
+//     background-color: red;
+//   }
+// }

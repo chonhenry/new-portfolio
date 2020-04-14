@@ -36,8 +36,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: page-load 3s;
-          animation: page-load 3s;
+  -webkit-animation: page-load 5s;
+          animation: page-load 5s;
 }
 
 #left-container #left-btn-container #left-btn:hover {
@@ -66,13 +66,49 @@
           justify-content: center;
 }
 
-#left-container #about-me-container #name {
+#left-container #about-me-container #name-section #name {
   color: #14ffec;
-  font-size: 70px;
+  font-size: 80px;
+  margin-bottom: 20px;
 }
 
-#left-container #about-me-container #resume {
+#left-container #about-me-container #introduction p {
+  margin-bottom: 40px;
+}
+
+#left-container #about-me-container #introduction #resume {
   border: solid 1px #14ffec;
+}
+
+@media screen and (max-width: 770px) {
+  #left-container {
+    width: 100vw;
+    height: 30vh;
+    color: #14ffec;
+    position: absolute;
+    top: 0;
+  }
+  #left-container #about-me-container {
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    -webkit-animation: page-load 5s;
+            animation: page-load 5s;
+  }
+  #left-container #about-me-container #introduction p {
+    width: 300px;
+  }
 }
 
 .btn {
@@ -98,8 +134,8 @@
   height: 90vh;
   color: #14ffec;
   position: relative;
-  -webkit-animation: page-load 3s;
-          animation: page-load 3s;
+  -webkit-animation: page-load 5s;
+          animation: page-load 5s;
 }
 
 #right-container #right-btn-container {
@@ -195,6 +231,30 @@
   bottom: 15px;
 }
 
+@media screen and (max-width: 770px) {
+  #right-container {
+    position: absolute;
+    left: 0;
+    top: 350px;
+    height: 60vh;
+    width: 100vw;
+  }
+  #right-container #my-works-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  #right-container #my-works-container #work-collections .work-item {
+    opacity: 1;
+  }
+  #right-container #my-works-container #work-collections .work-item:hover {
+    width: 100%;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -209,6 +269,7 @@ a {
 }
 
 #container {
+  position: relative;
   width: 100vw;
   height: 100vh;
   background-color: #212121;
@@ -227,8 +288,8 @@ a {
   width: 2px;
   height: 75vh;
   background-color: #14ffec;
-  -webkit-animation: page-load 3s;
-          animation: page-load 3s;
+  -webkit-animation: page-load 5s;
+          animation: page-load 5s;
 }
 
 #container .line-shadow {
@@ -262,8 +323,8 @@ footer #footer a {
 footer #footer a i {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  -webkit-animation: page-load 3s;
-          animation: page-load 3s;
+  -webkit-animation: page-load 5s;
+          animation: page-load 5s;
 }
 
 footer #footer a i:hover {
@@ -277,8 +338,8 @@ footer #footer .tooltip {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   cursor: pointer;
-  -webkit-animation: page-load 3s;
-          animation: page-load 3s;
+  -webkit-animation: page-load 5s;
+          animation: page-load 5s;
 }
 
 footer #footer .tooltip .tooltiptext {
@@ -313,6 +374,26 @@ footer #footer .tooltip:hover .tooltiptext {
   }
   100% {
     opacity: 100%;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  #container {
+    padding: 0;
+    margin: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #container #middle-line {
+    width: 85vw;
+    height: 2px;
+    background-color: #14ffec;
+    -webkit-animation: page-load 5s;
+            animation: page-load 5s;
+    position: absolute;
+    top: 320px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
