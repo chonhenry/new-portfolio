@@ -55,7 +55,7 @@
   }
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 770px) and (min-width: 501px) {
   #left-container {
     width: 100vw;
     height: 30vh;
@@ -73,7 +73,7 @@
       width: 100vw;
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      // justify-content: space-between;
       position: absolute;
       left: 0;
       top: 100px;
@@ -82,6 +82,46 @@
       #introduction {
         p {
           width: 300px;
+        }
+      }
+    }
+  }
+}
+
+// Phone - less than 500px(max-width: 500px)
+@media (max-width: 500px) {
+  #left-container {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+
+    // #left-btn-container {
+    //   visibility: hidden;
+    // }
+
+    #about-me-container {
+      opacity: 1;
+      margin: auto;
+      padding: 0;
+
+      #name-section {
+        position: absolute;
+        top: 10%;
+        width: 100%;
+        padding: 0 30px;
+      }
+
+      #introduction {
+        position: absolute;
+        padding: 0 30px;
+        width: 100vw;
+        margin: auto;
+        width: 100%;
+
+        p {
+          width: 100%;
+          margin-bottom: 50px;
         }
       }
     }
