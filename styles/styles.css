@@ -39,6 +39,8 @@
   width: 100%;
   height: 100vh;
   position: relative;
+  -webkit-animation: page-load 5s;
+          animation: page-load 5s;
 }
 
 #left-container #left-btn-container {
@@ -178,6 +180,8 @@
   width: 100%;
   height: 100vh;
   position: relative;
+  -webkit-animation: page-load 5s;
+          animation: page-load 5s;
 }
 
 #right-container #right-btn-container {
