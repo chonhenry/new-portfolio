@@ -1,12 +1,10 @@
 @import "./button";
 
 #right-container {
-  // border: $secondary 1px solid;
-  width: 40vw;
-  height: 90vh;
-  color: $secondary;
+  width: 100%;
+  height: 100vh;
   position: relative;
-  animation: page-load 5s;
+  // border-bottom: 1px solid $secondary;
 
   #right-btn-container {
     width: 100%;
@@ -14,43 +12,100 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // visibility: hidden; // will remove
-
-    #left-btn:hover {
-      cursor: pointer;
-    }
+    // visibility: hidden;
   }
 
   #my-works-container {
-    visibility: hidden; //will remove
-    opacity: 0; // will change back to 0
-
+    visibility: hidden;
+    opacity: 0;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    color: $grey;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: scroll;
+    padding: 20px 35px 5px 35px;
+    overflow: auto;
 
-    &::-webkit-scrollbar {
-      width: 0 !important;
-    }
-
-    #work-collections {
+    .work-item {
       width: 100%;
-      height: 90%;
+      margin-bottom: 40px;
+
+      .work-img {
+        img {
+          width: 100%;
+          max-width: 700px;
+        }
+      }
+
+      .work-description {
+        margin-top: 10px;
+        width: 100%;
+
+        .work-title {
+          color: $grey;
+        }
+
+        .divider-line {
+          height: 1px;
+          background-color: $secondary;
+          margin: 8px 0;
+        }
+
+        .language {
+          color: $grey;
+        }
+      }
+    }
+  }
+}
+
+@keyframes page-load {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+  #right-container {
+    height: 75vh;
+    padding: 0px 35px;
+
+    #my-works-container {
+      visibility: hidden;
 
       .work-item {
         display: flex;
+
+        .work-description {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1281px) {
+  #right-container {
+    width: 45vw;
+    height: 90vh;
+
+    #my-works-container {
+      margin-left: 0;
+
+      &::-webkit-scrollbar {
+        width: 0 !important;
+      }
+
+      .work-item {
         margin-bottom: 15px;
         display: flex;
         width: 100%;
         opacity: 0.4;
         transition: all 0.5s;
+        max-width: 1394px;
 
         &:hover {
           width: 120%;
@@ -77,102 +132,6 @@
             width: 100%;
             background-color: $secondary;
             margin: 10px 0;
-          }
-        }
-      }
-    }
-  }
-}
-
-// Responsive
-// Tablet - less than 1200px(max-width: 1200px), greater than 501px(min-width:501px)
-@media screen and (max-width: 770px) and (min-width: 501px) {
-  #right-container {
-    position: absolute;
-    left: 0;
-    top: 350px;
-    height: 60vh;
-    width: 100vw;
-
-    // #right-btn-container {
-    //   visibility: hidden;
-    // }
-
-    #my-works-container {
-      // opacity: 1;
-      // visibility: visible;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0px;
-      padding-left: 50px;
-      padding-right: 50px;
-      // padding-bottom: 50px;
-
-      #work-collections {
-        .work-item {
-          opacity: 1;
-
-          &:hover {
-            width: 100%;
-          }
-        }
-      }
-    }
-  }
-}
-
-//Phone - less than 500px(max-width: 500px)
-// @media (max-width: 500px) {
-//   #work-collections {
-//   }
-// }
-
-@media (max-width: 500px) {
-  #right-container {
-    position: absolute;
-    left: 0;
-    top: 100vh;
-    height: 100vh;
-    width: 100vw;
-
-    // #right-btn-container {
-    //   visibility: hidden;
-    // }
-
-    #my-works-container {
-      // opacity: 1;
-      // visibility: visible;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0px;
-      padding-left: 50px;
-      padding-right: 50px;
-      // padding-bottom: 50px;
-
-      #work-collections {
-        width: 100%;
-
-        .work-item {
-          opacity: 1;
-          display: flex;
-          flex-direction: column;
-
-          &:hover {
-            width: 100%;
-          }
-
-          a {
-            width: 100%;
-          }
-
-          .work-description {
-            width: 100%;
-          }
-
-          .view-code {
-            position: static;
           }
         }
       }

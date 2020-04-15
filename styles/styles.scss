@@ -1,4 +1,5 @@
 @import "./scss/variables";
+@import "./scss/button";
 @import "./scss/left-container";
 @import "./scss/right-container";
 @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
@@ -8,6 +9,8 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Share Tech Mono", monospace;
+  background-color: $main;
+  color: $secondary;
 }
 
 a {
@@ -16,74 +19,143 @@ a {
 }
 
 #container {
-  position: relative;
   width: 100vw;
-  height: 100vh;
-  background-color: $main;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
 
   #middle-line {
-    width: 2px;
-    height: 75vh;
-    background-color: $secondary;
+    visibility: visible;
     animation: page-load 5s;
-  }
-
-  .line-shadow {
-    box-shadow: 0px 0px 20px 3px $secondary;
+    width: 80%;
+    height: 1px;
+    background-color: 1px solid $secondary;
+    margin: 20px 0;
+    border-radius: 1px;
   }
 }
 
 footer {
-  position: absolute;
-  color: $secondary;
-  bottom: 35px;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // margin-top: 10px;
 
-  #footer {
-    width: 30%;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-
-    a {
-      margin: 0 10px;
-      color: $secondary;
-
-      i {
-        transition: all 0.2s;
-        animation: page-load 5s;
-
-        &:hover {
-          transform: translateY(-5px);
-        }
-      }
-    }
+  #logos {
+    margin-top: 10px;
 
     .tooltip {
-      margin: 0 8px;
-      position: relative;
-      transition: all 0.2s;
-      cursor: pointer;
-      animation: page-load 5s;
+      display: none;
+    }
+    a {
+      padding: 10px;
+    }
+  }
 
-      .tooltiptext {
-        font-size: 16px;
-        width: 150px;
-        position: absolute;
-        margin-left: 10px;
-        visibility: hidden;
+  #email-btn {
+    display: none;
+  }
+
+  p {
+    margin: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+  #container {
+    #middle-line {
+      visibility: visible;
+      width: 80%;
+      height: 1px;
+      background-color: $secondary;
+      margin: 20px auto;
+    }
+
+    .line-shadow {
+      box-shadow: 0px 0px 20px 3px #14ffec;
+    }
+  }
+}
+
+@media (min-width: 1281px) {
+  * {
+    overflow: hidden;
+  }
+
+  #container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+
+    #middle-line {
+      visibility: visible;
+      height: 75vh;
+      width: 2px;
+      background-color: $secondary;
+      margin: 0;
+    }
+
+    .line-shadow {
+      box-shadow: 0px 0px 20px 3px #14ffec;
+    }
+  }
+
+  footer {
+    position: absolute;
+    color: $secondary;
+    bottom: 20px;
+    width: 100%;
+
+    #logos {
+      height: 40px;
+      width: 100%;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      position: relative;
+
+      .tooltip {
+        display: inline;
       }
 
-      &:hover {
-        transform: translateY(-5px);
-        .tooltiptext {
-          visibility: visible;
+      a {
+        margin: 0 10px;
+        padding: 0;
+        color: $secondary;
+        width: 32px;
+
+        i {
+          margin-top: 5px;
+          transition: all 1s;
+          animation: page-load 5s;
+
+          &:hover {
+            transform: rotate(360deg);
+          }
         }
       }
+
+      .tooltip {
+        cursor: pointer;
+
+        #email-btn {
+          display: block;
+        }
+      }
+
+      #copy-text {
+        height: 100%;
+        width: 130px;
+        margin: 0 0 0 150px;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        visibility: hidden;
+      }
     }
+  }
+
+  #email {
+    display: none;
   }
 }
 
@@ -93,52 +165,5 @@ footer {
   }
   100% {
     opacity: 100%;
-  }
-}
-
-@media screen and (max-width: 770px) and (min-width: 501px) {
-  #container {
-    padding: 0;
-    margin: 0;
-    // background-color: blue;
-    flex-direction: column;
-
-    #middle-line {
-      width: 85vw;
-      height: 2px;
-      background-color: $secondary;
-      animation: page-load 5s;
-      position: absolute;
-      top: 320px;
-    }
-  }
-}
-
-// Phone - less than 500px(max-width: 500px)
-@media (max-width: 500px) {
-  // html,
-  // body {
-  //   width: 100%;
-  //   height: 100%;
-  //   margin: 0px;
-  //   padding: 0px;
-  //   overflow-x: hidden;
-  // }
-
-  #container {
-    padding: 0;
-    margin: 0;
-    flex-direction: column;
-    height: 200vh;
-
-    #middle-line {
-      visibility: hidden;
-    }
-  }
-
-  #footer {
-    position: absolute;
-    top: -20px;
-    left: 36%;
   }
 }

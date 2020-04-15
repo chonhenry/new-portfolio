@@ -44,8 +44,8 @@ const show_shadow = () => {
 setInterval(show_shadow, 100);
 
 // Copy to Clipboard
-const email_btn = document.getElementById("email_btn");
-const copyText = document.getElementById("copy_text");
+const email_btn = document.getElementById("email-btn");
+const copyText = document.getElementById("copy-text");
 let selection = window.getSelection();
 let range = document.createRange();
 
@@ -54,6 +54,11 @@ email_btn.addEventListener("click", () => {
   copyText.innerText = "Email has been copied";
 });
 
+email_btn.addEventListener("mouseout", () => {
+  copyText.style.visibility = "hidden";
+});
+
 email_btn.addEventListener("mouseover", () => {
-  copyText.innerText = "Copy My Email to Clipboard";
+  copyText.style.visibility = "visible";
+  copyText.innerText = "Copy Email to Clipboard";
 });
