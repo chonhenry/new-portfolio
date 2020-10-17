@@ -464,7 +464,7 @@ footer p {
   footer #logos #copy-text {
     height: 100%;
     width: 130px;
-    margin: 0 0 0 150px;
+    margin: 0 0 0 300px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
